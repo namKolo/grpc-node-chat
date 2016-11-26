@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package chat;
+
+service KoloChat {
+  rpc login (User) returns (LoginSucess) {}
+  rpc sendMessage (Message) returns (IsSucess) {}
+  rpc getMessages (User) returns (Messages) {}
+}
+
+message User {
+  string username = 1;
+}
+
+message LoginSucess {
+  string username = 1;
+  bool success = 2;
+}
+
+message Message {
+  string username = 1;
+  string content = 2;
+}
+
+message Messages {
+  bool success = 1;
+  repeated string messages = 2;
+}
+
+message IsSucess {
+  bool success = 1;
+}
