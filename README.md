@@ -6,9 +6,9 @@ This app is a demonstration for grpc
 
 ## How to setup/run
 
-`npm install
+`npm install`
 
-`npm run server
+`npm run server`
 
-`npm run client
+`npm run client`
 
